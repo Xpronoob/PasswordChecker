@@ -2,37 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PasswordChecker</title>
   </head>
-  <body>
-    <h1 class="bg-green-700">PasswordChecker</h1>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PasswordChecker</title>
-  </head>
-  <body>
-    <h1>Password Checker</h1>
-    <main>
-      <label for="input">Password</label>
-      <input id="input" type="text" />
-
-      <p id="upperCase">Mayuscula</p>
-      <p id="lowerCase">Minuscula</p>
-      <p id="number">Numero</p>
-      <p id="symbol">Simbolo</p>
-      <p id="length">Longitud de la contraseña mayor a 8 caracteres</p>
-      <p id="strength">Fortaleza de la contraseña</p>
-      <!-- x Characters containing -->
-      <!-- CHECK BOX  TO SHOW PASSWORD -->
-    </main>
+  <body class="bg-gray-200">
+    <div class="mx-auto max-w-md border-2 border-black p-2 mt-10">
+      <main>
+        <h1 class="text-2xl">Password Checker</h1>
+        <label for="input">Password: </label>
+        <input
+          id="input"
+          type="text"
+          placeholder="Your password here"
+          class="border-2 rounded-xl w-48 p-2 mb-2"
+        />
+        <hr class="border-gray-300" />
+        <div class="flex justify-center items-center">
+          <p id="upperCase" class="mx-1">Mayuscula</p>
+          <p id="lowerCase" class="mx-1">Minuscula</p>
+          <p id="number" class="mx-1">Numero</p>
+          <p id="symbol" class="mx-1">Simbolo</p>
+        </div>
+        <p id="length">Longitud de la contraseña:</p>
+        <p id="strength">Fortaleza de la contraseña:</p>
+        <!-- x Characters containing -->
+        <!-- CHECK BOX  TO SHOW PASSWORD -->
+      </main>
+    </div>
   </body>
   <!-- <script src="app.js"></script> -->
   <script type="module" src="./src/app.js"></script>

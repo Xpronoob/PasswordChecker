@@ -8,8 +8,14 @@ var existUpperCase = false
 var existLowerCase = false
 
 function mayuscula(letra) {
-  if (/^[a-zA-Z]$/.test(letra)) {
+  if (/^[A-Z]$/.test(letra)) {
     return letra === letra.toUpperCase()
+  } else return false
+}
+
+function minuscula(letra) {
+  if (/^[a-z]$/.test(letra)) {
+    return letra === letra.toLowerCase()
   } else return false
 }
 
@@ -29,10 +35,27 @@ input.addEventListener('input', () => {
     }
   }
 
+  for (let index = 0; index < value.length; index++) {
+    var letra = value.charAt(index)
+
+    if (minuscula(letra)) {
+      existLowerCase = true
+      break
+    } else {
+      existLowerCase = false
+    }
+  }
+
   if (existUpperCase) {
     upperCase.style.color = 'green'
   } else {
     upperCase.style.color = 'red'
+  }
+
+  if (existLowerCase) {
+    lowerCase.style.color = 'green'
+  } else {
+    lowerCase.style.color = 'red'
   }
 
   // Validar longitud de contraseña >= 8
